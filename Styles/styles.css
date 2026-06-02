@@ -1,87 +1,83 @@
 :root {
     --primary-color: rgb(36, 65, 122);
-    --background-light: rgb(230,225,225);
+    --background-light: rgb(230, 225, 225);
 }
 
 body {
-   background-color: var(--background-light);
-   font-family: Arial, Helvetica, sans-serif ;
-   max-width: 900px;
-   font-size: medium;
-   margin: 0 auto;
-   
-}
-.resume-header {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 20px;
-    align-items: center;
+    background-color: var(--background-light);
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 850px;
+    font-size: 14px;
+    margin: 0 auto;
     padding: 20px;
-
 }
+
+.resume-header {
+    padding: 20px;
+    background-color: var(--background-light);
+    border: 3px solid var(--primary-color);
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.header-text h1 {
+    margin: 0 0 5px 0;
+}
+
 .contact-info {
     display: flex;
-    margin-top: 8px;
+    flex-wrap: wrap;
+    margin-top: 5px;
     gap: 15px;
 }
-.contact-info
-span:not(:last-child)::after {
+
+.contact-info span:not(:last-child)::after {
     content: "|";
     margin-left: 15px;
     color: var(--primary-color);
 }
 
-    
-
-
-
-
-
-header {
-      background-color: var(--background-light);
-    display: flex;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    border-radius: 10px;
-    border: 5px solid rgb(var(--primary-color));
-    margin-bottom: 20px;
-}
-section {
-    background-color: var(--background-light);
-    border: 5px solid var(--primary-color);
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-.profile-pic {
-    border-radius: 50%;
-    border: 3px solid var(--primary-color);
-    margin-top: 10px;
-    object-fit: cover;
-    
-}
 
 h1 {
-      color: var(--primary-color);
-      font-size: 36px;
-      text-align: center;
-      margin-bottom: 10px;
-      
-}
-header{
-   text-align: left;
+    color: var(--primary-color);
+    font-size: 32px;
+    text-align: left;
+    margin-bottom: 5px;
 }
 
 h2 {
-      color: rgb(36, 65, 122)
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
 
+section {
+    background-color: var(--background-light);
+    border: 3px solid var(--primary-color);
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+section p {
+    margin: 4px 0;
+}
+
+section ul {
+    margin: 5px 0;
+    padding-left: 20px;
+}
+
+section li {
+    margin-bottom: 3px;
 }
 
 a {
     color: var(--primary-color);
     text-decoration: none;
 }
+
 a:hover,
 a:focus {
     text-decoration: underline;
@@ -90,20 +86,21 @@ a:focus {
 @media (max-width: 600px) {
     body {
         padding: 10px;
-        
     }
-    header{
-        text-align: center  ;
+
+    .resume-header {
+        text-align: center;
     }
+
+    .contact-info {
+        justify-content: center;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
     section {
-        padding: 10px;
-    }
-    img {
-        margin: 10px auto;
-        display: block;
-    }
-    .fields {
-        grid-template-columns: 1fr;
+        padding: 10px 15px;
     }
 }
-
